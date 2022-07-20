@@ -13,7 +13,7 @@ const removeExt = (fileName) => {
 fileNames.filter((file) => {
     const name = removeExt(file) //users, storage, tracks
     if(name !== 'index'){
-        router.use(`/${name}`, require(`./${file}`)) // http://localhost: 300/api/tracks
+        router.use(`/${name}`, require(`./${file}`)) // http://localhost: 300/api/tracks.js
     }
 })
 
