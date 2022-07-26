@@ -7,14 +7,14 @@ const PATH_ROUTES = __dirname;
 const fileNames = fs.readdirSync(PATH_ROUTES)
 
 const removeExt = (fileName) => {
-    return fileName.split('.').shift()
+    return fileName.split('.').shift();
 }
 
 fileNames.filter((file) => {
-    const name = removeExt(file) //users, storage, tracks
+    const name = removeExt(file); //users, storage, tracks
     if(name !== 'index'){
-        router.use(`/${name}`, require(`./${file}`)) // http://localhost: 300/api/tracks.js
+        router.use(`/${name}`, require(`./${file}`)); // http://localhost: 3000/api/tracks.js
     }
 })
 
-module.exports = router
+module.exports = router;

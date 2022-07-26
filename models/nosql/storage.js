@@ -7,14 +7,12 @@ const StorageScheme = new mongoose.Schema(
          },
          filename:{
             type: Number
-         }
-         
+         }  
      },
      {
          timestamps: true,
          versionKey: false,
      }
-
 );
 
-module.exports = mongoose.model('storages', StorageScheme)
+module.exports = mongoose.model('storage', StorageScheme)
